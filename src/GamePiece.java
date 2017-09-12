@@ -2,7 +2,7 @@ public class GamePiece {
 
     private int positionX;
     private int positionY;
-    private Boolean frozen;
+    private boolean frozen;
     private String name;
     private String color;
 
@@ -53,11 +53,11 @@ public class GamePiece {
         }
     }
 
-    public void freeze(Boolean frozen) {
+    public void freeze() {
         this.frozen = true;
     }
 
-    public void unfreeze(Boolean frozen) {
+    public void unfreeze() {
         this.frozen = false;
     }
 
