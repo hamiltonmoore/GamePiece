@@ -49,7 +49,7 @@ public class GamePiece {
             this.positionY = positionY;
         }
         else {
-            System.out.printf("Haha you're frozen!");
+            System.out.println("Haha you're frozen!");
         }
     }
 

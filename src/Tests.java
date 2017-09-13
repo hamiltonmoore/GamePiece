@@ -35,15 +35,19 @@ public class Tests {
         }
 
         System.out.println("Did it stay put? = " + test.getPositionX() + " and " + test.getPositionY());
+        test.freeze();
         if (test.getFrozen()) {
-            test.move(test.getPositionX() + 10, test.getPositionY() + 10);
-            if (test.getPositionX() == 10 && test.getPositionY() == 33) {
-                System.out.println("the position has not been changed");
+            int originalPositionX = test.getPositionX();
+            int originalPositionY = test.getPositionY();
+            test.move(originalPositionX + 10, originalPositionY + 10);
+            if (originalPositionX == test.getPositionX() && originalPositionY == test.getPositionY()) {
+                System.out.println("verified that frozen piece was not moved");
             } else {
                 System.out.println("failed verification");
             }
         }
 
     }
+
 }
 
